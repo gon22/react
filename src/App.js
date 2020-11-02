@@ -1,27 +1,16 @@
-import './App.scss';
 import React, { useState } from 'react';
+import './App.scss';
+import ReactHeader from './ReactHeader';
 
 
 
 function App() {
-  
-  const [open, setOpen] = useState(false);
-  const [value,setValue] = useState('어렵다..');
-  const displayFlex = {
-    display:'flex'
-  }
-  const handleClick = (e) => {
-    e.preventDefault();
-    console.log('tlqkf')
-    const displayFlex = {
-      display:'flex'
-    }
-  }
-  
+  const [no,setNo] = useState('Notice')
   return (
     <>
       <div id="skip"><a href="section">Skip to the menu / 본문가기</a></div>
-      <header id="wrap_header">
+      <ReactHeader sub = {no}/>
+      {/* <header id="wrap_header">
         <div className="header">
           <h1 className="logo"><a href="#"><b>Logo</b></a></h1>
           <div className="gnb">
@@ -33,11 +22,11 @@ function App() {
               <li><a href="#">Notice</a></li>
             </ul>
           </div>
-          <a href="" className="btnAll" onClick={handleClick}>
+          <a href="" className="btnAll">
             <h2>메뉴</h2>
           </a>
         </div>
-      </header>
+      </header> */}
       <div className="btnMenu">
         <div className="back"></div>
         <div className="btnright">
